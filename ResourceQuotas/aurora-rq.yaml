@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: aurora-quota
+  namespace: aurora-database
+spec:
+  hard:
+    cpu: "6"
+    memory: 7Gi
+    pods: "10"

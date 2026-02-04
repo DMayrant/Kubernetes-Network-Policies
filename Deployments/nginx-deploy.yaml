@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-deploy
+  name: nginx-deploy
+  namespace: aurora-database
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx-deploy
+  template:
+    metadata:
+      labels:
+        app: nginx-deploy
+    spec:
+      containers:
+        - image: nginx:1.28.0
+          name: nginx
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: "256m"
+              memory: 512Mi
+            requests:
+              cpu: "128m"
+              memory: 256Mi
