@@ -5,7 +5,10 @@ Network Policies is a Kubernetes security feature that controls both egress and 
 This production environment contains two namespaces with resource quotas, each with their own deployment and network policy to control traffic 
 
 TCP 80 will allow you run curl commands for internal service discovery and service to service communication within your cluster network
-TCP 443 allows traffic over HTTPS into an external APIs
+
+TCP 443 allows traffic over HTTPS into an external APIs 🎯
+
+UPD/TCP 53 allows your workloads DNS resolution from the coredns pod in the control plane kube-system namespace. DNS resolution is completed a DNS resolver by converting a domain name into IP address 🌏
 
 # Apply Directories 📂
 
