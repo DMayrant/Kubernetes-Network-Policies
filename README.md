@@ -53,3 +53,5 @@ from inside your pod
 ```bash
 cat /etc/resolv.conf
 ```
+![image alt](https://github.com/DMayrant/Kubernetes-Network-Policies/blob/main/Screenshot%202569-02-04%20at%2000.10.25.png?raw=true)
+
